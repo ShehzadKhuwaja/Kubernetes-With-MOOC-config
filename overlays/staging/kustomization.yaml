@@ -42,7 +42,8 @@ images:
   newName: shehzadkhuwaja/wikipedia-todo-generator
   newTag: ddd3d85
 - name: PROJECT/todoapp
-  newName: shehzadkhuwaja/todoapp
+  newName: shehzadkhuwaja/backend-imageapi
+  newTag: ddd3d85
 - name: PROJECT/todoappfrontend
   newName: shehzadkhuwaja/todoappfrontend
 - name: shehzadkhuwaja/backend-todos
