@@ -39,7 +39,8 @@ images:
   newName: shehzadkhuwaja/broadcaster
   newTag: b5f19a6b090e65351d20c0595cd172668e78084d
 - name: PROJECT/todo-cronjob
-  newName: shehzadkhuwaja/todo-cronjob
+  newName: shehzadkhuwaja/wikipedia-todo-generator
+  newTag: ddd3d85
 - name: PROJECT/todoapp
   newName: shehzadkhuwaja/todoapp
 - name: PROJECT/todoappfrontend
