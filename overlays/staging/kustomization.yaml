@@ -46,5 +46,3 @@ images:
   newTag: ddd3d85
 - name: PROJECT/todoappfrontend
   newName: shehzadkhuwaja/todoappfrontend
-- name: shehzadkhuwaja/backend-todos
-  newTag: 2393d1b
