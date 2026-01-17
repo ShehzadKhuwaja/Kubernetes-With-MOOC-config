@@ -1,15 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
-kind: Application
+kind:  Application
 metadata:
-  name: todoapp-production
-  namespace: argocd
+  name:  todoapp-production
+  namespace:  argocd
+  finalizers: 
+    - resources-finalizer. argocd.argoproj. io
 spec:
-  project: default
+  project:  default
   
-  source:
-    repoURL: https://github.com/ShehzadKhuwaja/Kubernetes-With-MOOC.git
-    targetRevision: HEAD
-    path: 1.2/overlays/production
+  source: 
+    repoURL: https://github.com/ShehzadKhuwaja/Kubernetes-With-MOOC-config.git
+    targetRevision: main
+    path: overlays/production
   
   destination:
     server: https://kubernetes.default.svc
@@ -24,14 +26,7 @@ spec:
       - CreateNamespace=true
     retry:
       limit: 5
-      backoff:
+      backoff: 
         duration: 5s
         factor: 2
         maxDuration: 3m
-  
-  # Only sync when a tag is pushed
-  ignoreDifferences:
-    - group: "*"
-      kind: "*"
-      jsonPointers:
-        - /metadata/annotations

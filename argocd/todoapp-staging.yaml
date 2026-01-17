@@ -3,21 +3,23 @@ kind: Application
 metadata:
   name: todoapp-staging
   namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   
   source:
-    repoURL: https://github.com/ShehzadKhuwaja/Kubernetes-With-MOOC.git
+    repoURL: https://github.com/ShehzadKhuwaja/Kubernetes-With-MOOC-config.git
     targetRevision: main
-    path: 1.2/overlays/staging
+    path: overlays/staging
   
-  destination:
+  destination: 
     server: https://kubernetes.default.svc
     namespace: staging
   
-  syncPolicy:
+  syncPolicy: 
     automated:
-      prune: true
+      prune:  true
       selfHeal: true
       allowEmpty: false
     syncOptions:
